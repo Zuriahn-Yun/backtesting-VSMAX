@@ -41,4 +41,12 @@ from backtesting import Backtest
 bt = Backtest(df, SmaCross, cash=10_000, commission=.002)
 stats = bt.run()
 print(stats)
-bt.plot()
+# What is this 
+# stats = bt.optimize(n1=range(5, 30, 5),
+#                     n2=range(10, 70, 5),
+#                     maximize='Equity Final [$]',
+#                     constraint=lambda param: param.n1 < param.n2)
+# print(stats)
+
+print("STATS STRATEGY")
+print(stats._strategy)
